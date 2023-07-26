@@ -55,6 +55,10 @@ jobs:
       shell: bash
       run: |
         cd build && ninja
+    - uses: actions/upload-artifact@v2
+      with:
+        name: MOD-WINDOWS${{ matrix.os }}-isBundled-${{ matrix.bundled }}
+        path: D:\a\aseprite\aseprite\build\bin\aseprite\
     - name: Running C++ Tests
       shell: bash
       run: |
